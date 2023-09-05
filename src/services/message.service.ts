@@ -60,3 +60,23 @@ export const getAdminResource = async (
     error,
   };
 };
+
+export const getAdminFeatureResource = async (
+  accessToken: string
+): Promise<ApiResponse> => {
+  const config: AxiosRequestConfig = {
+    url: `${apiServerUrl}/api/messages/admin-features`,
+    method: "GET",
+    headers: {
+      "content-type": "application/json",
+      Authorization: `Bearer ${accessToken}`,
+    },
+  };
+
+  const { data, error } = (await callExternalApi({ config })) as ApiResponse;
+
+  return {
+    data,
+    error,
+  };
+};

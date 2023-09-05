@@ -10,6 +10,7 @@ import { NotFoundPage } from "./pages/not-found-page";
 import { ProfilePage } from "./pages/profile-page";
 import { ProtectedPage } from "./pages/protected-page";
 import { PublicPage } from "./pages/public-page";
+import { AdminFeaturesPage } from "./pages/admin-features-page";
 
 export const App: React.FC = () => {
   const { isLoading } = useAuth0();
@@ -37,6 +38,10 @@ export const App: React.FC = () => {
         <Route
           path="/admin"
           element={<ProtectedRoute component={AdminPage} />}
+        />
+        <Route
+          path="/admin-features"
+          element={<ProtectedRoute component={AdminFeaturesPage} />}
         />
         <Route path="/callback" element={<CallbackPage />} />
         <Route path="*" element={<NotFoundPage />} />
