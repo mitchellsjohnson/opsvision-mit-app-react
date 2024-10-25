@@ -23,7 +23,7 @@ export const ProfilePage: React.FC = () => {
               information of an authenticated user.
             </span>
             <span>
-              <strong>Only authenticated users can access this page.</strong>
+              <strong>Only authenticated users can access THIS page.</strong>
             </span>
           </p>
           <div className="profile-grid">
